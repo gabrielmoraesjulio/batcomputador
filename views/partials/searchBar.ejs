@@ -1,0 +1,30 @@
+<div class="col tab mt-2">
+    <div class="row mt-2 d-flex align-content-center">
+        <div class="col-6">
+            <form action="/searchone" method="post">
+                <h5>Search: 
+                    <input type="text" class="search-input outline-default" name="searchOne">
+                    <button class="outline-default">SEND</button>
+                </h5>
+            </form>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <a class="no-style-href" href="/register"><button class="outline-default">REGISTER</button></a>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-lg-3 categories"><h5 class="d-flex justify-items-center">ID</h5></div>
+        <div class="col-lg-3 categories-2"><h5 class="d-flex justify-items-center">NAME</h5></div>
+        <div class="col-lg-3 categories-3"></div>
+        <div class="col-lg-3 categories-3"></div>
+    </div>
+
+    <% criminals.forEach(criminals => { %> 
+        <div class="row">
+            <div class="col-lg-3 search-res"><%= criminals.id %></div>
+            <div class="col-lg-7 search-res"><%= criminals.name %></div>
+            <div class="col-lg-1 search-res"><a class="no-style-href" href="/criminalprofile/<%= criminals.id %>">ABOUT</a></div>
+            <div class="col-lg-1 search-res"><a class="no-style-href" href="../update/<%= criminals.id %>">EDIT</a></div>
+        </div>
+    <% }) %>
+</div>

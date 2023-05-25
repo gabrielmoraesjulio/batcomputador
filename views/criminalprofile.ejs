@@ -1,0 +1,15 @@
+<%- include ('partials/header.ejs') %>
+<body>
+    <div class="container mt-3">
+        <a href="/"class="no-style-href"><h1>Batcomputer</h1></a>
+            <div class="tab p-4 text-center">
+                <h1> <%= criminal.name %> </h1>
+                <h5>Age: <%= criminal.age %> </h5>
+                <h5>Description: <%= criminal.description %> </h5>
+                <h5>Weakness: <%= criminal.weakness %> </h5>
+                <h5>Risk level: <%= criminal.risklevel %> </h5>
+                <h5>Arrested: <%= criminal.arrested %> </h5>
+            </div>
+    </div>
+</body>
+<%- include ('partials/footer.ejs') %>
